@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+/* Celstomp aesthetic (mirrors celstomp/css/variables.css + celstomp/css/base.css) */
+@font-face {
+  font-family: "Cascadia";
+  src:
+    local("Cascadia Code"),
+    local("Cascadia Mono"),
+    local("Cascadia");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inconstant";
+  src: url("/fonts/Inconstant-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font: "Cascadia", "Cascadia Code", "Cascadia Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* Light theme (Celstomp-inspired) */
+  --celstomp-border: #cfd8e3;
+  --celstomp-ink: #0b0e12;
+  --celstomp-muted: #526273;
+  --celstomp-accent: #e53935;
+
+  --celstomp-bg: #f4f7fb;
+  --celstomp-panel: #ffffff;
+  --celstomp-panel2: #eef2f7;
+  --celstomp-sticky: #e8eef6;
+  --celstomp-btn-bg: #e8eef6;
+  --celstomp-btn-bd: #cbd5e1;
+
+  /* Fumadocs UI theme variables */
+  --color-fd-background: var(--celstomp-bg);
+  --color-fd-foreground: var(--celstomp-ink);
+  --color-fd-muted: var(--celstomp-panel2);
+  --color-fd-muted-foreground: var(--celstomp-muted);
+  --color-fd-popover: var(--celstomp-panel);
+  --color-fd-popover-foreground: var(--celstomp-ink);
+  --color-fd-card: var(--celstomp-panel);
+  --color-fd-card-foreground: var(--celstomp-ink);
+  --color-fd-border: var(--celstomp-border);
+  --color-fd-primary: #1a212c;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-secondary: var(--celstomp-btn-bg);
+  --color-fd-secondary-foreground: var(--celstomp-ink);
+  --color-fd-accent: var(--celstomp-btn-bg);
+  --color-fd-accent-foreground: var(--celstomp-ink);
+  --color-fd-ring: #1a212c;
+}
+
+.dark {
+  /* Dark theme (matches Celstomp defaults) */
+  --celstomp-border: #1e2430;
+  --celstomp-ink: #e9eef3;
+  --celstomp-muted: #9aa7b7;
+  --celstomp-accent: #e53935;
+
+  --celstomp-bg: #0b0e12;
+  --celstomp-panel: #131821;
+  --celstomp-panel2: #0f1319;
+  --celstomp-sticky: #10151d;
+  --celstomp-btn-bg: #1a212c;
+  --celstomp-btn-bd: #2a3240;
+
+  --color-fd-background: var(--celstomp-bg);
+  --color-fd-foreground: var(--celstomp-ink);
+  --color-fd-muted: var(--celstomp-panel2);
+  --color-fd-muted-foreground: var(--celstomp-muted);
+  --color-fd-popover: var(--celstomp-panel);
+  --color-fd-popover-foreground: var(--celstomp-ink);
+  --color-fd-card: var(--celstomp-panel);
+  --color-fd-card-foreground: var(--celstomp-ink);
+  --color-fd-border: var(--celstomp-border);
+  --color-fd-primary: #8dd1ff;
+  --color-fd-primary-foreground: #0b0e12;
+  --color-fd-secondary: var(--celstomp-btn-bg);
+  --color-fd-secondary-foreground: var(--celstomp-ink);
+  --color-fd-accent: var(--celstomp-btn-bg);
+  --color-fd-accent-foreground: var(--celstomp-ink);
+  --color-fd-ring: #8dd1ff;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--celstomp-bg);
+  color: var(--celstomp-ink);
+  font-size: 14px;
+  line-height: 1.35;
+  /* Celstomp behaves like an app: lock document scroll */
+  overflow: hidden;
+}
+
+/* Keep scrolling inside the docs layout (app-like) */
+#nd-docs-layout {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* Main document pane */
+#nd-page {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Toc pane (desktop) */
+#nd-toc {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--font);
+}

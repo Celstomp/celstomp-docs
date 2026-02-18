@@ -1,0 +1,124 @@
+---
+title: Layers
+description: Understanding Celstomp's layer system for complex animations
+---
+
+Celstomp's layer system enables complex compositions with separate drawing elements.
+
+## Layer Types
+
+Celstomp provides four specialized layers:
+
+| Layer | Purpose | Blend Mode |
+|-------|---------|------------|
+| **LINE** | Main line art and strokes | Normal (default) |
+| **SHADE** | Shading and shadows | Multiply |
+| **COLOR** | Color fills and flats | Source Over |
+| **FILL** | Background fills and solids | Source Over |
+| **PAPER** | Background/reference layer | Bottommost, always visible |
+
+## Layer Panel
+
+Access the layer panel to manage all layers:
+
+- **Visibility toggle**: Show/hide individual layers
+- **Opacity slider**: Adjust layer transparency
+- **Blend mode**: Change how layers composite
+- **Reorder**: Drag to rearrange layer order
+- **Swatches**: Quick access to layer-specific colors
+
+## Blend Modes
+
+Each layer supports different blend modes for different effects:
+
+| Blend Mode | Effect | Best For |
+|------------|-------|----------|
+| Normal | Standard layering | LINE, FILL layers |
+| Multiply | Darkens, preserves highlights | SHADE layers |
+| Overlay | Increases contrast | COLOR layers |
+| Screen | Lightens, preserves shadows | Highlight effects |
+| Darken | Uses darker colors | Deep shadows |
+| Lighten | Uses lighter colors | Highlights |
+| Hard Light | High contrast effects | Intense highlights |
+
+## Layer Operations
+
+### Solo Mode
+
+View one layer in isolation:
+1. Click solo button (eye icon with ring)
+2. Other layers become hidden
+3. Click again to restore visibility
+
+**Keyboard shortcut**: Press layer visibility shortcut (configurable)
+
+### Reordering
+
+Drag layers to change stack order:
+- Higher layers appear on top
+- Lower layers appear behind
+- PAPER is always at bottom
+
+### Opacity
+
+Adjust layer opacity for effects:
+- Range: 0% (transparent) to 100% (opaque)
+- Useful for ghosting, shadows, or subtle elements
+- Set via slider in layer panel
+
+## Color Swatches
+
+Each layer maintains its own color palette:
+- **Quick access**: Click swatch to restore previous color
+- **Persistent**: Colors saved per layer
+- **Layer switching**: Automatically switches to that layer's active color
+
+## Drawing on Layers
+
+Draw strokes only affect the currently active layer:
+1. Select desired layer in layer panel
+2. Ensure layer is visible (eye icon shown)
+3. Draw with brush or other tools
+
+**Note**: Eraser removes content from the active layer only.
+
+## Clearing Layers
+
+Clear individual layers:
+1. Select target layer
+2. Use **Clear Layer** button or shortcut
+3. Only that layer's content is removed
+
+**Clear Frame** removes content from all layers.
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| Layer panel shortcuts | Move between layers (configurable) |
+| Visibility toggle | Hide/show current layer |
+| Solo mode | Isolate current layer |
+
+## Workflow Tips
+
+### Traditional Animation Workflow
+
+1. **LINE layer**: Draw all linework and outlines
+2. **SHADE layer**: Add shadows and depth
+3. **COLOR layer**: Flat colors below lines
+4. **FILL layer**: Background elements
+5. **PAPER layer**: Static reference or backgrounds
+
+### Flash Animation Style
+
+Use LINE layer for keyframes, duplicate across frames.
+
+### Clean Up Workflow
+
+Use separate layers for different passes (pencils, inks, colors).
+
+## Related Features
+
+- [Tools](/docs/features/tools) - Drawing tools that affect active layer
+- [Canvas](/docs/features/canvas) - Drawing surface for layers
+- [Onion Skin](/docs/features/onion-skin) - Preview layer across frames

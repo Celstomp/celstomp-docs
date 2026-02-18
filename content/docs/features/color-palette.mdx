@@ -1,0 +1,149 @@
+---
+title: Color Palette
+description: Manage colors with palettes, color picker, and swatches
+---
+
+Celstomp provides flexible color management through palettes, an advanced color picker, and layer-specific swatches.
+
+## Color Picker
+
+Celstomp includes a sophisticated color picker system.
+
+### Triangle Picker Mode
+
+Toggle between standard and triangle picker modes:
+
+- **Square picker**: Standard RGB/HSV color selection
+- **Triangle picker**: Intuitive triangular color space (recommended)
+
+The triangle picker offers:
+- More intuitive color relationships
+- Easier hue/saturation navigation
+- Natural color harmony selection
+
+### Color Selection
+
+Click anywhere on the color picker to select:
+- Preview shows selected color
+- Hex code displayed (for reference)
+- Auto-updates palette swatch
+
+## Palette System
+
+Save and organize colors in palettes for your project.
+
+### Creating Palettes
+
+1. Choose colors for your palette
+2. Click **Save Palette** button
+3. Name your palette
+4. Saved to browser local storage
+
+### Loading Palettes
+
+1. Click **Load Palette** button
+2. Select from saved palettes
+3. Palette colors populate swatches
+
+### Import/Export
+
+Share palettes across projects:
+
+**Export Palette:**
+1. Click export button
+2. Download JSON file with palette data
+
+**Import Palette:**
+1. Click import button
+2. Select JSON file
+3. Palette loads into swatches
+
+## Color Swatches
+
+Quick access to frequently used colors:
+
+- **Active color**: Currently selected color (large preview)
+- **Palette swatches**: Colors from current palette
+- **Layer swatches**: Per-layer saved colors
+- **History**: Recent colors used (automatic)
+
+Click any swatch to select that color.
+
+## Layer-Specific Swatches
+
+Each layer maintains its own color swatches:
+
+- **LINE layer**: Linework colors (ink colors)
+- **SHADE layer**: Shadow colors
+- **COLOR layer**: Flat colors
+- **FILL layer**: Background colors
+- **PAPER layer**: Background/reference colors
+
+Switching layers automatically switches to that layer's active color.
+
+## Color Operations
+
+### Clearing Colors
+
+- **Clear palette**: Remove all colors from current palette
+- **Clear color**: Remove specific color (right-click swatch)
+
+### Managing Palettes
+
+- **Rename**: Edit palette name
+- **Delete**: Remove entire palette
+- **Duplicate**: Copy palette for variations
+
+## Keyboard Integration
+
+Eyedropper shortcut integrates with palette:
+
+| Shortcut | Action |
+|----------|--------|
+| `Alt` + click | Pick color from canvas |
+| Swatch click | Select color from palette |
+| Eyedropper tool | Pick color (alternative method) |
+
+## Workflow Tips
+
+### Organized Palettes
+
+Create separate palettes for different needs:
+- **Character palette**: Skin, hair, eyes, clothing colors
+- **Environment palette**: Sky, ground, foliage colors
+- **Effect palette**: FX, lighting, atmosphere colors
+
+### Color Harmony
+
+Use picker features for harmonious colors:
+- Triangle picker helps visualize color relationships
+- Complementary colors for contrast
+- Analogous colors for harmony
+
+### Consistency
+
+Use layer swatches for consistent character colors across frames:
+- Save character palette
+- Use same swatches across all frames
+- Maintain visual consistency
+
+## Palette Formats
+
+Exported palettes use JSON format:
+
+```json
+{
+  "name": "Character A",
+  "colors": [
+    {"hex": "#FF6B6B", "name": "Skin"},
+    {"hex": "#4ECDC4", "name": "Hair"},
+    {"hex": "#FFE66D", "name": "Eyes"}
+  ]
+}
+```
+
+## Related Features
+
+- [Tools](/docs/features/tools) - Drawing tools using palette colors
+- [Layers](/docs/features/layers) - Layer-specific color swatches
+- [Eyedropper](/docs/features/tools#eyedropper) - Pick colors from canvas

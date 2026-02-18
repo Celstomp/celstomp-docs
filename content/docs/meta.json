@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "index",
+    "---Getting Started---",
+    "introduction",
+    "quick-start",
+    "installation",
+    "---Features---",
+    "...features",
+    "---Guides---",
+    "...guides",
+    "---Project---",
+    "...project",
+    "---Links---",
+    "external:[GitHub Repository](https://github.com/Celstomp/celstomp)",
+    "external:[Live App](https://ginyo.space/celstomp/)"
+  ]
+}

@@ -1,0 +1,95 @@
+---
+title: Timeline
+description: Master Celstomp's timeline for frame-by-frame animation
+---
+
+The timeline is Celstomp's core animation control system, designed for traditional frame-by-frame cel animation workflow.
+
+## Timeline Overview
+
+The timeline displays all frames in your animation as a grid of cells. Each cell represents a single frame (cel).
+
+### Navigation
+
+Move through frames using keyboard or timeline controls:
+
+| Shortcut | Action |
+|----------|--------|
+| `E` | Next frame |
+| `Q` or `W` | Previous frame |
+| `Space` | Play/Pause animation |
+| `Home` | Jump to first frame |
+| `End` | Jump to last frame |
+
+### Frame Grid
+
+- Each cell shows a thumbnail of that frame
+- The current frame is highlighted with a distinct border
+- Click any cell to jump directly to that frame
+- Timeline scrolls automatically to keep the current frame visible
+
+## Frame Operations
+
+### Adding Frames
+
+Celstomp automatically manages frames based on your actions:
+
+- **New empty frame**: Add after the current frame (right-click timeline)
+- **Duplicate frame**: Copy current frame to the next position
+- **Clear frame**: Erase all content from the current frame
+
+### Deleting Frames
+
+Delete individual frames or ranges:
+
+1. Select frame(s) in the timeline (click or drag)
+2. Press the `Delete` key to remove
+3. Confirm deletion if prompted
+
+## Playback Controls
+
+### Playback Controls
+
+- **Play/Pause**: `Space` or the timeline play button
+- **Loop**: Toggle between single-play and loop mode
+- **Speed**: Adjust the playback FPS (frames per second)
+
+### Timeline Display
+
+- **FPS counter**: Shows the current playback speed
+- **Time display**: Shows the animation duration at the current FPS
+- **Frame counter**: Current frame / Total frames
+
+## Onion Skin Integration
+
+The timeline works seamlessly with onion skin:
+
+- The previous frame is ghosted when viewing the next frame
+- The next frame is ghosted when viewing the previous frame
+- Toggle onion skin with `O` key or the toolbar button
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Space` | Play/Pause |
+| `E` / `R` | Next frame |
+| `Q` / `W` | Previous frame |
+| `Delete` | Delete selected frame(s) |
+| `O` | Toggle onion skin |
+| `Ctrl/Cmd + Z` | Undo frame operation |
+| `Ctrl/Cmd + Y` | Redo frame operation |
+
+## Tips
+
+- Use **autofill** to automatically fill empty frames with the previous frame content
+- **Play snapped** option snaps playback to frame boundaries
+- **Keep onion playing** and **keep transparency playing** control preview behavior during playback
+- Set your target frame rate before starting for accurate timing
+
+## Related Features
+
+- [Canvas](/docs/features/canvas) - Drawing area for frames
+- [Onion Skin](/docs/features/onion-skin) - Preview adjacent frames
+- [Export](/docs/features/export) - Save your animation
+- [Shortcuts](/docs/features/shortcuts) - All keyboard shortcuts

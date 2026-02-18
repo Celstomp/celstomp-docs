@@ -1,0 +1,165 @@
+---
+title: Export
+description: Export your Celstomp animations in multiple formats
+---
+
+Celstomp supports exporting animations in multiple formats for different use cases.
+
+## Export Formats
+
+### MP4 Video
+
+Export as MP4 video file:
+- **Wide compatibility**: Plays on most devices and platforms
+- **Compression**: Configurable quality settings
+- **Best for**: YouTube, social media, presentations
+
+**File extension**: `.mp4`
+
+### GIF
+
+Export as animated GIF:
+- **Wide support**: Plays in browsers, messaging apps
+- **Limited colors**: 256-color palette (may dither)
+- **Best for**: Quick previews, memes, web use
+
+**File extension**: `.gif`
+
+### Image Sequence
+
+Export as individual image files:
+- **Maximum quality**: No compression artifacts
+- **Full flexibility**: Edit in other software, composite manually
+- **Best for**: Professional post-production, high-quality needs
+
+**File extension**: `.png` (one file per frame)
+
+## Export Settings
+
+### Frame Rate (FPS)
+
+Control animation speed:
+
+| FPS | Use Case |
+|-----|----------|
+| 12 fps | Traditional animation timing |
+| 24 fps | Film/TV standard |
+| 30 fps | Smooth web animation |
+| 60 fps | High frame-rate gaming |
+
+### Quality (for MP4)
+
+Adjust video quality:
+- **Low**: Smaller file size, more compression
+- **Medium**: Balanced size and quality
+- **High**: Larger file, minimal compression
+
+### Duration
+
+Export specific frame ranges:
+- **All frames**: Entire animation
+- **Selection**: Only selected timeline frames
+- Use multi-select (`Shift` + click) to specify range
+
+## Exporting
+
+1. **Open export menu**: File -> Export
+2. **Choose format**: Select MP4, GIF, or Image Sequence
+3. **Configure settings**: Set FPS, quality, and range
+4. **Export**: Click export button
+5. **Download**: File downloads automatically
+
+## Project Files
+
+Celstomp projects are saved as `.json` files containing:
+- All frames and layers
+- Canvas settings (size, aspect ratio)
+- Palettes and color data
+- Tool settings and preferences
+
+### Saving Projects
+
+**Keyboard**: `Ctrl/Cmd + S`
+
+Project files save to browser default download location.
+
+### Loading Projects
+
+**Keyboard**: `Ctrl/Cmd + O`
+
+1. Open file dialog
+2. Select `.json` project file
+3. Project loads with all data intact
+
+### Auto-Save
+
+Celstomp automatically saves draft projects:
+- **Location**: Browser local storage
+- **Restoration**: Available on next visit
+- **Multiple drafts**: Recent projects shown on home screen
+
+## Export Workflow Examples
+
+### Social Media (GIF)
+
+1. Create animation at appropriate dimensions
+2. Set FPS to 12-24 for social media
+3. Export as GIF
+4. Upload directly to platforms
+
+### YouTube (MP4)
+
+1. Use recommended canvas size (1920×1080 or 1280×720)
+2. Set FPS to 24 or 30
+3. Export as MP4 at Medium or High quality
+4. Upload to YouTube
+
+### Post-Production (Image Sequence)
+
+1. Export as PNG image sequence
+2. Import into video editor (After Effects, Premiere, DaVinci)
+3. Add effects, compositing, color grading
+4. Render final video from editor
+
+## Export Troubleshooting
+
+### GIF looks bad
+
+**Issue**: Dithering or color banding
+
+**Solutions**:
+- Use simpler color palette
+- Reduce number of frames
+- Consider MP4 export instead
+
+### MP4 file too large
+
+**Issue**: Export file size excessive
+
+**Solutions**:
+- Reduce quality setting
+- Lower FPS
+- Reduce canvas dimensions
+
+### Can't export
+
+**Issue**: Export button not working
+
+**Solutions**:
+- Check browser permissions (download access)
+- Ensure frames exist in timeline
+- Try different browser
+
+## Tips
+
+- **Test exports**: Preview before final export
+- **Use appropriate format**: GIF for quick shares, MP4 for quality
+- **Consider FPS**: Lower FPS for traditional look, higher for smooth motion
+- **Keep backups**: Save project files before export
+- **Batch exports**: Export multiple versions (GIF + MP4) for different uses
+
+## Related Features
+
+- [Timeline](/docs/features/timeline) - Frame management for export
+- [Canvas](/docs/features/canvas) - Canvas size affects export resolution
+- [Project Files](/docs/project/about) - Understanding Celstomp projects

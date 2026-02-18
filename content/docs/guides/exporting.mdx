@@ -1,0 +1,209 @@
+---
+title: Exporting Your Work
+description: Complete guide to exporting Celstomp animations
+---
+
+Learn to export your Celstomp animations for different platforms and use cases.
+
+## Export Overview
+
+Celstomp supports three main export formats:
+
+1. **MP4 Video**: High quality, wide compatibility
+2. **GIF**: Animated image, easy sharing
+3. **Image Sequence**: Individual frames, maximum quality
+
+Choose format based on your destination platform.
+
+## MP4 Video Export
+
+### When to Use MP4
+
+- **YouTube/Vimeo**: Video platforms
+- **Social media video**: Facebook, Twitter (X), Instagram Reels
+- **Presentations**: PowerPoint, Keynote
+- **Professional work**: Portfolios, client deliverables
+
+### Exporting MP4
+
+1. **File -> Export**: Open export dialog
+2. **Select MP4**: Choose video format
+3. **Configure settings**:
+   - **FPS**: 24 (film standard) or 30 (smooth web)
+   - **Quality**: Medium (balanced) or High (best quality)
+   - **Range**: All frames or selection
+4. **Export**: Click export button
+5. **Download**: Wait for processing, then download
+
+### MP4 Best Practices
+
+| Platform | Canvas Size | FPS | Quality |
+|----------|-------------|-----|--------|
+| YouTube | 1920×1080 or 1280×720 | 24-30 | Medium/High |
+| Instagram Reels | 1080×1920 (9:16) | 30 | High |
+| Twitter/X | 1280×720 or 1920×1080 | 24-30 | Medium |
+| Facebook | 1080×1080 or 1280×720 | 24-30 | Medium |
+
+## GIF Export
+
+### When to Use GIF
+
+- **Quick shares**: Messaging apps, forums
+- **Web embedding**: Simple website integration
+- **Memes and humor**: Social media fun content
+- **Previews**: Testing animation flow
+
+### Exporting GIF
+
+1. **File -> Export**: Open export dialog
+2. **Select GIF**: Choose animated GIF format
+3. **Configure settings**:
+   - **FPS**: 12-24 (GIFs handle lower FPS well)
+   - **Range**: All frames or selection
+4. **Export**: Click export button
+5. **Download**: GIF file saves to downloads
+
+### GIF Limitations
+
+- **256 colors**: Limited color palette may cause dithering
+- **Larger files**: Less efficient than MP4 for long animations
+- **No transparency**: Background always solid color
+
+**Tip**: Test GIF with your color palette first.
+
+### GIF Optimization Tips
+
+- **Simplify colors**: Reduce palette complexity
+- **Fewer frames**: Keep animations short and loopable
+- **Consider MP4**: If quality issues, switch to MP4
+
+## Image Sequence Export
+
+### When to Use Image Sequence
+
+- **Post-production**: Import into After Effects, Premiere, DaVinci
+- **High quality**: No compression artifacts
+- **Compositing**: Combine with other elements
+- **Sprite sheets**: Game development assets
+
+### Exporting Image Sequence
+
+1. **File -> Export**: Open export dialog
+3. **Select Image Sequence**: Choose PNG format
+4. **Configure settings**:
+   - **Format**: PNG (recommended)
+   - **Range**: All frames or selection
+5. **Export**: Click export button
+6. **Download**: ZIP file containing all frames
+
+### Image Sequence Naming
+
+Files are named sequentially:
+```
+frame_001.png
+frame_002.png
+frame_003.png
+...
+```
+
+Import sequence in video editor using "Import Image Sequence" or similar option.
+
+## Export Workflow Examples
+
+### Social Media Short
+
+1. **Canvas size**: 1080×1920 (9:16 vertical)
+2. **Animation**: Create loopable short (2-4 seconds)
+3. **Export**: MP4 at 30 fps, High quality
+4. **Upload**: Platform-specific upload
+
+### Tutorial Animation
+
+1. **Canvas size**: 1920×1080 or 1280×720
+2. **Animation**: Clear, step-by-step motion
+3. **Export**: MP4 at 24 fps, High quality
+4. **Voiceover**: Add in video editor (optional)
+
+### Character Walk Cycle
+
+1. **Canvas size**: 512×512 or similar
+2. **Animation**: 8-12 frame walk cycle
+3. **Export**: GIF (preview) or MP4 (final)
+4. **Use**: Import into game engine or animation software
+
+### Animated Sticker
+
+1. **Canvas size**: 512×512 or smaller
+2. **Animation**: Simple loop (2-4 frames)
+3. **Export**: GIF at 12-15 fps
+4. **Use**: Messaging apps, social media
+
+## Export Settings Deep Dive
+
+### Frame Rate (FPS)
+
+| FPS | Feel | Use Case |
+|-----|------|----------|
+| 12 | Traditional, snappy | Classic cel animation |
+| 24 | Film-like, smooth | Standard animation |
+| 30 | Modern, fluid | Web animation, gaming |
+| 60 | Ultra-smooth | High-frame-rate content |
+
+**Rule of thumb**: Lower FPS = more "classic" feel, higher FPS = "modern" feel.
+
+### Quality vs. File Size
+
+| Quality Setting | File Size | Quality | Best For |
+|---------------|-----------|--------|----------|
+| Low | Small | Noticeable compression | Quick previews, bandwidth limits |
+| Medium | Balanced | Good quality | Most use cases |
+| High | Large | Excellent quality | Final deliverables |
+
+## Troubleshooting Exports
+
+### Export Fails
+
+**Issue**: Export button doesn't work or errors
+
+**Solutions**:
+1. **Check browser permissions**: Ensure download access enabled
+2. **Verify frames**: Timeline must have at least one frame
+3. **Clear cache**: Restart Celstomp
+4. **Try different browser**: Some browsers handle downloads differently
+
+### Poor GIF Quality
+
+**Issue**: Dithering, banding, wrong colors
+
+**Solutions**:
+1. **Simplify palette**: Use fewer colors
+2. **Reduce frames**: Shorter animations export better
+3. **Try MP4**: Better color support
+4. **Check original**: Ensure animation looks good before export
+
+### MP4 Too Large
+
+**Issue**: File size excessive for upload limits
+
+**Solutions**:
+1. **Reduce quality**: Use Medium or Low
+2. **Lower FPS**: 24 or 12 instead of 30/60
+3. **Reduce canvas size**: Smaller dimensions = smaller file
+4. **Trim frames**: Export only necessary portion
+
+## Project Files vs. Exports
+
+Remember difference between saving and exporting:
+
+| Action | Purpose | File Type |
+|--------|---------|-----------|
+| Save Project | Continue editing later | .json (editable) |
+| Export | Share or final use | .mp4, .gif, .png (final) |
+
+**Always save project** before exporting - you can always re-export later!
+
+## Related Features
+
+- [Export Format Details](/docs/features/export) - Technical export information
+- [Timeline](/docs/features/timeline) - Managing frames for export
+- [Canvas](/docs/features/canvas) - Canvas dimensions affect export resolution

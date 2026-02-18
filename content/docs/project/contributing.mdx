@@ -1,0 +1,241 @@
+---
+title: Contributing
+description: How to contribute to Celstomp development
+---
+
+Contributions to Celstomp are welcome! This guide covers how to help improve the project.
+
+## Ways to Contribute
+
+### Code Contributions
+
+Fix bugs, add features, improve performance:
+
+1. **Fork repository** on GitHub
+2. **Create branch** for your work
+3. **Make changes** following project conventions
+4. **Test thoroughly** (see Testing section)
+5. **Submit pull request** with clear description
+
+### Bug Reports
+
+Help identify and fix issues:
+
+1. **Search existing issues** first
+2. **Create new issue** if not found
+3. **Provide details**:
+   - Browser and version
+   - Steps to reproduce
+   - Expected vs. actual behavior
+   - Screenshots (if visual issue)
+
+### Feature Requests
+
+Suggest improvements and new features:
+
+1. **Search existing requests** first
+2. **Create new issue** with feature request template
+3. **Describe**:
+   - Problem this solves
+   - Proposed solution
+   - Alternative approaches considered
+   - Use cases
+
+### Documentation
+
+Improve Celstomp documentation:
+
+1. **Fork repository**
+2. **Edit documentation** files
+3. **Submit pull request**
+
+### Testing
+
+Test Celstomp and report issues:
+
+1. **Test on different browsers** (Chrome, Firefox, Safari, Edge)
+2. **Test on different devices** (desktop, tablet, mobile)
+3. **Test workflows** (drawing, exporting, saving)
+4. **Report findings** as issues or pull requests
+
+## Development Setup
+
+### Prerequisites
+
+- **Node.js**: Version 18 or higher
+- **npm**: Comes with Node.js
+- **Git**: For version control
+- **Browser**: Chrome, Firefox, Safari, or Edge
+
+### Getting Started
+
+```bash
+# Clone your fork
+git clone https://github.com/YOUR-USERNAME/celstomp.git
+cd celstomp
+
+# Add upstream remote
+git remote add upstream https://github.com/Celstomp/celstomp.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Dev server runs at `http://localhost:5173`
+
+### Project Structure
+
+```
+celstomp/
+├── celstomp/
+│   ├── celstomp-app.js       # Main application logic
+│   ├── celstomp-autosave.js   # Auto-save functionality
+│   ├── celstomp-imgseq.js     # Image sequence export
+│   └── ...                    # Other modules
+├── index.html                   # Entry point
+├── package.json                # Dependencies and scripts
+├── vite.config.js              # Vite build configuration
+└── run-dev.command / run-dev.bat  # Dev server scripts
+```
+
+## Code Conventions
+
+### JavaScript
+
+- **Vanilla JS**: No frameworks, use plain JavaScript
+- **ES6+**: Modern syntax (const/let, arrow functions, modules)
+- **Comments**: Explain complex logic, document functions
+- **Naming**: Clear, descriptive variable and function names
+
+### HTML/CSS
+
+- **Semantic HTML**: Use proper elements (main, nav, section)
+- **Accessible**: Include ARIA labels where needed
+- **Clean CSS**: Organized, readable, no unnecessary complexity
+
+### Git Workflow
+
+```bash
+# Create feature branch
+git checkout -b feat/your-feature-name
+
+# Make changes
+# ... edit files ...
+
+# Stage and commit
+git add .
+git commit -m "feat: add your feature description"
+
+# Push to your fork
+git push origin feat/your-feature-name
+
+# Create pull request on GitHub
+```
+
+## Testing
+
+### Manual Testing Checklist
+
+Before submitting changes, test:
+
+- [ ] **All browsers**: Chrome, Firefox, Safari, Edge
+- [ ] **Core workflows**: Drawing, tools, timeline, export
+- [ ] **Edge cases**: Empty project, large projects, special characters
+- [ ] **Mobile/touch**: Touch gestures, responsive layout
+- [ ] **Error handling**: Graceful failure, user feedback
+
+### Browser Testing Matrix
+
+| Browser | Version | Tested |
+|---------|---------|---------|
+| Chrome | Latest | ☐ |
+| Firefox | Latest | ☐ |
+| Safari | Latest | ☐ |
+| Edge | Latest | ☐ |
+
+## Pull Request Guidelines
+
+### PR Title Format
+
+Use conventional commits:
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation
+- `refactor:` Code refactoring
+- `style:` Code style changes
+- `test:` Adding/updating tests
+- `chore:` Maintenance tasks
+
+### PR Description
+
+Include:
+- **Summary**: Brief description of changes
+- **Motivation**: Why this change is needed
+- **Testing**: How you tested this
+- **Screenshots**: For visual changes
+- **Breaking changes**: Any API or behavior changes
+
+### PR Checklist
+
+Before merging:
+- [ ] Code follows project conventions
+- [ ] Tests pass (if tests exist)
+- [ ] Documentation updated (if needed)
+- [ ] No unnecessary files changed
+- [ ] Commit messages are clear
+
+## Communication
+
+### GitHub Issues
+
+- **Bugs**: Use bug report template
+- **Features**: Use feature request template
+- **Questions**: Use discussions or label as question
+
+### Pull Request Reviews
+
+- **Be constructive**: Focus on code, not people
+- **Explain reasoning**: Help reviewers understand decisions
+- **Respond promptly**: Address feedback in timely manner
+
+## Reporting Security Issues
+
+Found a security vulnerability?
+
+1. **Do not create public issue**
+2. **Email privately** to maintainers (see repository security policy)
+3. **Provide details**:
+   - Vulnerability description
+   - Steps to reproduce
+   - Potential impact
+4. **Wait for guidance** before public disclosure
+
+## Getting Help
+
+### Questions?
+
+- **GitHub Discussions**: Ask community questions
+- **GitHub Issues**: For bugs and feature requests
+- **Documentation**: Read existing docs first
+
+## Recognition
+
+Contributors are recognized in:
+- **Credits page**: [Credits](/docs/project/credits)
+- **GitHub contributors**: Automatic listing
+- **Release notes**: Major contributors mentioned
+
+## License
+
+By contributing, you agree that your contributions will be licensed under the project's license (GPL-3.0).
+
+## Thank You
+
+Thank you for considering contributing to Celstomp! Every contribution helps make animation more accessible.
+
+---
+
+*Last updated: February 2026*

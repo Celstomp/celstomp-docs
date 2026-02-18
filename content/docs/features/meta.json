@@ -1,0 +1,14 @@
+{
+  "title": "Features",
+  "pages": [
+    "index",
+    "canvas",
+    "timeline",
+    "tools",
+    "layers",
+    "onion-skin",
+    "color-palette",
+    "shortcuts",
+    "export"
+  ]
+}

@@ -1,0 +1,243 @@
+---
+title: Using Layers
+description: Advanced layer techniques for complex animations
+---
+
+Master Celstomp's layer system to create rich, detailed animations.
+
+## Layer System Refresher
+
+Celstomp provides four drawing layers plus a background:
+
+| Layer | Blend Mode | Primary Use |
+|-------|------------|--------------|
+| **LINE** | Normal | Linework, outlines, details |
+| **SHADE** | Multiply | Shadows, shading, depth |
+| **COLOR** | Source Over | Flat colors, fills |
+| **FILL** | Source Over | Background elements, large fills |
+| **PAPER** | Bottommost | Static backgrounds, references |
+
+## Layer Workflow Strategies
+
+### Strategy 1: Traditional Animation Layers
+
+Classic animation workflow using layers by element:
+
+**Step 1: LINE Layer - Roughs**
+- Sketch character poses and keyframes
+- Use light opacity for loose drawings
+- Focus on motion and proportion
+
+**Step 2: LINE Layer - Cleanup**
+- Draw final linework over roughs
+- Clean, confident lines
+- Turn off rough layer visibility
+
+**Step 3: SHADE Layer - Shadows**
+- Add shadows under character
+- Shade clothing and details
+- Multiply blend darkens naturally
+
+**Step 4: COLOR Layer - Flats**
+- Flat colors underneath lines
+- Base colors for each element
+- Source over shows over fills
+
+**Step 5: FILL/PAPER Layer - Background**
+- Static scene background
+- Ground plane, environment
+- Appears in all frames
+
+### Strategy 2: Flash Animation Style
+
+Simple, efficient approach:
+
+**Use LINE layer only:**
+- All drawing on single layer
+- Clean, bold lines
+- Duplicate frames across animation
+- Color later in separate pass (or export black/white)
+
+**Pros:** Fast workflow, easy to manage
+**Cons:** Limited depth, harder to edit colors later
+
+### Strategy 3: Multi-Pass Painting
+
+Detailed, painterly approach:
+
+**Pass 1: Sketch (LINE, low opacity)**
+- Gesture drawings
+- Explore composition
+- Plan animation
+
+**Pass 2: Inks (LINE, full opacity)**
+- Final linework
+- Clean strokes
+- Details and textures
+
+**Pass 3: Underpainting (COLOR)**
+- Flat colors below lines
+- Block in major color areas
+- Establish base palette
+
+**Pass 4: Overpainting (SHADE/FILL)**
+- Shadows and highlights
+- Refine colors
+- Add atmosphere and depth
+
+## Advanced Layer Techniques
+
+### Layer Opacity for Atmosphere
+
+Use opacity to create depth and atmosphere:
+
+**Background layers (FILL/PAPER):**
+- Lower opacity (30-50%)
+- Creates atmospheric depth
+- Distant, foggy look
+
+**Foreground elements (LINE):**
+- Full opacity (100%)
+- Sharp, in-focus
+- Creates depth separation
+
+### Blend Mode Magic
+
+Experiment with blend modes for effects:
+
+**SHADE with Multiply:**
+- Natural shadows
+- Subtle depth
+- Works well with LINE layer
+
+**COLOR with Screen:**
+- Glowing highlights
+- Light effects
+- Magical atmospheres
+
+**Custom combinations:**
+- Try different blend modes
+- Layer multiple SHADE passes
+- Create unique visual styles
+
+### Layer Stacking Order
+
+Layer order is crucial for composition:
+
+**Standard order (top to bottom):**
+1. LINE (topmost)
+2. SHADE
+3. COLOR
+4. FILL
+5. PAPER (bottommost)
+
+**Swapping layers:**
+Drag to reorder
+- LINE above SHADE for crisp outlines
+- SHADE above COLOR for shadowing over colors
+- Experiment with order for different effects
+
+### Solo Mode for Focus
+
+Isolate layers to focus work:
+
+**Use case 1: Clean linework**
+- Solo LINE layer
+- Hide all others
+- Perfect lines without distraction
+
+**Use case 2: Refine colors**
+- Solo COLOR layer
+- Hide lines to see color relationships
+- Adjust without line interference
+
+**Use case 3: Check shadows**
+- Solo SHADE layer
+- Verify shadow placement
+- Adjust opacity without other elements
+
+## Layer Color Management
+
+### Per-Layer Swatches
+
+Each layer remembers its own colors:
+
+- **LINE swatches**: Ink colors, outline colors
+- **SHADE swatches**: Shadow colors, dark tones
+- **COLOR swatches**: Flat colors, character palette
+- **FILL swatches**: Background colors, environment palette
+
+**Benefit:** Switch layers, switch to appropriate colors automatically.
+
+### Character Palette Layer
+
+Dedicated layer for character colors:
+
+1. **Create character palette**
+2. **Assign to COLOR layer**
+3. **Consistent colors** across all frames
+4. **Easy recoloring**: Change one swatch, updates across frames
+
+## Layer-By-Layer Animation
+
+Animate different elements on different layers:
+
+### Example: Character with Moving Hair
+
+1. **LINE layer (head):** Static face/eyes/mouth
+2. **LINE layer (hair):** Animating hair flow
+3. **SHADE layer:** Hair shadows move with hair
+4. **COLOR layer:** Hair colors move together
+
+**Benefit:** Each element animated independently, easier to manage.
+
+### Example: Background Foreground Separation
+
+1. **PAPER layer:** Static distant background
+2. **FILL layer:** Mid-ground elements (static)
+3. **COLOR/SHADE layers:** Foreground character (animating)
+
+**Benefit:** Creates parallax depth without complex compositing.
+
+## Layer Cleanup
+
+### Merging Layers (Manual)
+
+When layers become too many:
+
+1. **Select frame(s)** with complex layering
+2. **Duplicate project**: Safety backup
+3. **Merge manually**: Redraw from reference onto fewer layers
+4. **Test**: Ensure animation still works
+
+### Deleting Unused Layers
+
+Remove empty or unnecessary layers:
+
+1. **Check each layer**: Is there content?
+2. **Delete if empty**: Right-click layer panel (if available)
+3. **Simplify**: Fewer layers = faster workflow
+
+## Layer Shortcuts
+
+| Action | Shortcut |
+|--------|----------|
+| Navigate layers | Panel shortcuts (if configured) |
+| Toggle visibility | Layer panel button |
+| Solo mode | Solo button (eye with ring) |
+| Reorder | Drag and drop |
+
+## Tips for Efficient Layer Use
+
+- **Plan ahead**: Know which layers you need before drawing
+- **Use solo mode**: Focus on one element at a time
+- **Save layer palettes**: Quick access to consistent colors
+- **Keep it simple**: Don't over-layer unless necessary
+- **Organize by element**: Character = certain layers, background = others
+
+## Related Features
+
+- [Layers Overview](/docs/features/layers) - Layer system basics
+- [Blend Modes](/docs/features/layers#blend-modes) - Detailed blend mode reference
+- [Tools](/docs/features/tools) - Drawing tools for layers
+- [Canvas](/docs/features/canvas) - Drawing surface

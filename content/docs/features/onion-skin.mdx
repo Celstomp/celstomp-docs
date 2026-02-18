@@ -1,0 +1,133 @@
+---
+title: Onion Skin
+description: Preview previous and next frames for smooth animation
+---
+
+Onion skin (also called onion skinning) lets you see previous and/or next frames as ghosted overlays while drawing the current frame. This is essential for smooth, traditional animation.
+
+## What is Onion Skin?
+
+Onion skin displays adjacent frames at reduced opacity over your current canvas:
+
+- **Previous frame**: Shows frame before current
+- **Next frame**: Shows frame after current
+- **Ghosted display**: Appears semi-transparent
+- **Real-time updates**: Updates as you draw
+
+This technique originates from traditional animation where artists would stack translucent animation cels (sheets of onion-skin paper) to see motion.
+
+## Enabling Onion Skin
+
+Toggle onion skin visibility:
+
+- **Keyboard**: Press `O`
+- **Button**: Click onion skin icon in toolbar
+- **Menu**: View -> Onion Skin
+
+When enabled, ghosted frames appear on your canvas.
+
+## Onion Skin Settings
+
+### Color Tint
+
+Apply color tints to ghosted frames for better visibility:
+
+- **Previous frame color**: Choose tint color (default: customizable)
+- **Next frame color**: Choose tint color (default: customizable)
+- **Purpose**: Distinguish between prev/next and current frame
+
+Common tints:
+- Previous: Blue tint
+- Next: Red tint
+- Current: Normal (no tint)
+
+### Opacity
+
+Control how transparent ghosted frames appear:
+
+- **Range**: 0% (invisible) to 100% (fully visible)
+- **Default**: ~30-40% for subtle ghosting
+- **Adjust**: Use opacity slider in settings
+
+Higher opacity makes ghosted frames more visible but may clutter the view.
+
+### Blend Mode
+
+Choose how ghosted frames blend with current frame:
+
+| Blend Mode | Effect | Use Case |
+|------------|-------|----------|
+| **Multiply** | Darkens, preserves highlights | Dark lineart |
+| **Overlay** | Increases contrast | General animation |
+| **Source Over** | Standard blending | Most common |
+
+## Playback Options
+
+Control onion skin during animation playback:
+
+### Keep Onion Playing
+
+Show onion skin during playback:
+- **Enabled**: Ghosted frames visible while playing
+- **Disabled**: Onion skin hidden during playback
+- **Useful**: Verify smooth motion without distraction
+
+### Keep Transparency Playing
+
+Control layer transparency during playback:
+- **Enabled**: Layer transparency states preserved
+- **Disabled**: All layers shown at full opacity
+- **Useful**: Preview final animation without onion ghosting
+
+## Onion Skin Workflow
+
+### Frame-to-Frame Animation
+
+1. Draw initial frame
+2. Enable onion skin to see previous frame
+3. Draw next frame using previous as reference
+4. Repeat for entire animation
+
+### Inbetweening
+
+Create smooth transitions between keyframes:
+1. Draw keyframe A
+2. Draw keyframe B
+3. Create inbetween frames with both onion skins visible
+4. Adjust timing and spacing using ghosted references
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `O` | Toggle onion skin visibility |
+| `F` | Toggle transparency hold |
+| Settings panel | Adjust color, opacity, blend mode |
+
+## Tips
+
+- **Use different tints** for previous vs next frames to distinguish them
+- **Adjust opacity** based on your visual preference and drawing style
+- **Toggle during playback** to verify motion flow
+- **Keep previous frame** visible when drawing for smooth continuity
+- **Hide next frame** when drawing to focus on relationship with previous frame only
+
+## Common Issues
+
+### Ghosted frames too distracting
+
+**Solution**: Reduce opacity or use subtler tint colors.
+
+### Can't tell which is current frame
+
+**Solution**: Increase contrast between ghosted frames and current content.
+
+### Onion skin in wrong place
+
+**Solution**: Check frame ordering and ensure you're on the correct frame number.
+
+## Related Features
+
+- [Timeline](/docs/features/timeline) - Frame management
+- [Canvas](/docs/features/canvas) - Drawing surface with onion skin
+- [Layers](/docs/features/layers) - Multi-layer compositions with onion skin

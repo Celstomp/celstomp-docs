@@ -1,0 +1,73 @@
+---
+title: Canvas
+description: Learn about Celstomp's canvas system with configurable aspect ratios and navigation
+---
+
+The canvas is your main drawing area in Celstomp. It's designed to be intuitive and flexible for traditional frame-by-frame animation.
+
+## Aspect Ratio Configuration
+
+Celstomp supports various canvas aspect ratios for different animation styles:
+
+- **16:9** (default) - Widescreen format
+- **4:3** - Traditional TV format
+- **1:1** - Square format
+- **Custom** - Set your own dimensions
+
+You can change the aspect ratio in the canvas settings menu.
+
+## Navigation
+
+### Zoom and Pan
+
+Navigate your canvas easily with multiple input methods:
+
+**Mouse/Trackpad:**
+- Scroll wheel to zoom in/out
+- Hold middle mouse button and drag to pan
+- Or use scroll wheel click (middle click) to pan
+
+**Touch (Tablet/Mobile):**
+- Pinch to zoom in/out
+- Drag with two fingers to pan
+
+### Reset View
+
+Press `R` or use the reset button in the canvas toolbar to return to the default zoom and center position.
+
+## Canvas Features
+
+### Drawing Area
+
+The drawing area displays your current frame with the active layer selected. Onion skin previews (if enabled) show ghosted versions of adjacent frames.
+
+### Background
+
+The PAPER layer serves as the background. Use it for:
+- Static backgrounds
+- Layout drawings
+- Reference images
+- Elements that stay constant across frames
+
+## Performance Tips
+
+- Use an appropriate canvas size for your intended output resolution
+- Smaller canvases improve performance on older devices
+- Consider the aspect ratio of your target platform (YouTube, TikTok, Instagram, etc.)
+- For high-resolution export, work at a larger canvas size
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `R` | Reset view to default |
+| Scroll wheel | Zoom in/out |
+| Middle-click + drag | Pan canvas |
+| Pinch (touch) | Zoom in/out |
+| Two-finger drag (touch) | Pan canvas |
+
+## Related Features
+
+- [Layers](/docs/features/layers) - Learn about the layer system including PAPER
+- [Tools](/docs/features/tools) - Drawing tools for the canvas
+- [Shortcuts](/docs/features/shortcuts) - All keyboard shortcuts

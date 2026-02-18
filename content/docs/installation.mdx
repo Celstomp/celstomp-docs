@@ -1,0 +1,122 @@
+---
+title: Installation
+description: Set up Celstomp locally for development or personal use
+---
+
+## System Requirements
+
+### For Node.js Workflow
+- **Node.js**: Version 18 or higher
+- **npm**: Comes with Node.js
+- **Browser**: Chrome, Firefox, Safari, or Edge
+
+### For Python Workflow
+- **Python**: Version 3.x (most systems have this pre-installed)
+- **Browser**: Chrome, Firefox, Safari, or Edge
+
+## Installation Methods
+
+### Method 1: Clone from GitHub
+
+```bash
+git clone https://github.com/Celstomp/celstomp.git
+cd celstomp
+```
+
+### Method 2: Download as ZIP
+
+1. Go to the [GitHub repository](https://github.com/Celstomp/celstomp)
+2. Click the green **Code** button
+3. Select **Download ZIP**
+4. Extract the archive to your desired location
+
+## Running Celstomp
+
+### With Node.js (Recommended)
+
+This method uses Vite for fast development and optimized production builds.
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The development server will start at `http://localhost:5173`
+
+**Building for production:**
+
+```bash
+npm run build
+npm run preview   # Preview the built output
+```
+
+### With Python
+
+This method doesn't require Node.js installation.
+
+**Linux / Mac (Terminal):**
+```bash
+./run-dev.command
+```
+
+**Windows:**
+Double-click `run-dev.bat` in File Explorer, or run from command prompt:
+```cmd
+run-dev.bat
+```
+
+The Python server will start at `http://localhost:8000`
+
+## Browser Compatibility
+
+Celstomp works in all modern browsers:
+
+- **Chrome**: Full support (recommended)
+- **Firefox**: Full support
+- **Safari**: Full support
+- **Edge**: Full support
+
+Make sure your browser is up to date for the best experience.
+
+## Troubleshooting
+
+### Port Already in Use
+
+If you see a "port already in use" error:
+
+**For Vite (Node.js):**
+Edit `vite.config.js` to change the port number.
+
+**For Python:**
+The `run-dev.command` or `run-dev.bat` scripts can be edited to use a different port.
+
+### Permission Errors
+
+**Linux / Mac:**
+If `./run-dev.command` won't run, make it executable:
+```bash
+chmod +x run-dev.command
+```
+
+**Windows:**
+Right-click `run-dev.bat` and select "Run as administrator" if you encounter permission issues.
+
+### Dependencies Not Found
+
+If `npm install` fails:
+```bash
+# Clear npm cache
+npm cache clean --force
+
+# Reinstall
+npm install
+```
+
+## Next Steps
+
+- Read the [Quick Start guide](/docs/quick-start) to get animating
+- Explore [Features](/docs/features) to learn about Celstomp's capabilities
+- Check the [Guides](/docs/guides) for in-depth tutorials
